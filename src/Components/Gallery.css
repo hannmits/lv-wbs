@@ -1,0 +1,68 @@
+.gallery-section {
+  padding: 50px;
+  background-color: #ffebf8;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Memungkinkan foto untuk berpindah ke baris berikutnya */
+  gap: 20px; /* Spasi antara foto */
+}
+
+/* Foto di galeri */
+.gallery-photo {
+  width: 200px; /* Ukuran tetap */
+  height: 200px; /* Ukuran tetap */
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: float 3s ease-in-out infinite; /* Animasi mengambang */
+}
+
+/* Efek bayangan dan skala saat hover */
+.gallery-photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Animasi untuk mengambang */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+  
+
+  /* Responsif untuk Tablet (max-width: 1024px) */
+@media only screen and (max-width: 1024px) {
+  .gallery-grid {
+    gap: 15px;
+  }
+
+  .gallery-photo {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+/* Responsif untuk Ponsel (max-width: 768px) */
+@media only screen and (max-width: 768px) {
+  .gallery-grid {
+    gap: 10px;
+    justify-content: space-evenly;
+  }
+
+  /* Set foto menjadi dua kolom */
+  .gallery-photo {
+    width: calc(50% - 10px); /* Lebar 50% dari layar dengan margin 10px */
+    height: auto;
+  }
+}

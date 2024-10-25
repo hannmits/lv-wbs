@@ -1,0 +1,22 @@
+.card {
+    background-color: #fff0f6;
+    border: 2px solid #ff99cc;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .card-photo {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .card-message {
+    font-size: 1.2rem;
+    color: #ff3399;
+    font-style: italic;
+  }
+  
